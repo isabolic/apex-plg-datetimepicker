@@ -1,0 +1,121 @@
+.date-time-picker .input-group-addon {
+    padding: .4rem .8rem;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 2.4rem;
+    white-space: nowrap;
+    vertical-align: middle;
+    display: table-cell;
+    cursor: pointer;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    margin-left: -.1rem;
+}
+.date-time-picker-wg .btn.btn-primary,
+.date-time-picker .btn.btn-primary{
+    background-color: #337ab7;
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    border: 0px;
+}
+
+.date-time-picker-wg .bootstrap-datetimepicker-widget.dropdown-menu.bottom:before,
+.date-time-picker-wg .bootstrap-datetimepicker-widget.dropdown-menu.bottom:after,
+.date-time-picker-wg .bootstrap-datetimepicker-widget.dropdown-menu.top:before,
+.date-time-picker-wg .bootstrap-datetimepicker-widget.dropdown-menu.top:after,
+.date-time-picker-wg .bootstrap-datetimepicker-widget.dropdown-menu.pull-right:before,
+.date-time-picker-wg .bootstrap-datetimepicker-widget.dropdown-menu.pull-right:after{
+    display: none;
+}
+
+
+.date-time-picker .input-group.date{
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    padding: 0px .5rem;
+}
+
+.date-time-picker-wg{
+    position: relative;
+}
+
+.date-time-picker-wg .list-unstyled {
+    padding-left: 0;
+    list-style: none;
+}
+.date-time-picker-wg .collapse {
+    display: none;
+    visibility: hidden;
+}
+.date-time-picker-wg .collapse.in {
+    display: block;
+    visibility: visible;
+}
+.date-time-picker .form-control {
+    height: 2.4rem;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    display: table-cell;
+}
+
+.date-time-picker .col-md-6 {
+    float: left;
+    width: 50%;
+}
+
+.date-time-picker .input-group .form-control{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right-style: none;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
