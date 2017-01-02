@@ -239,7 +239,7 @@
         this.format = {oracle:null, moment:null}
         this.isRendered = false;
         this.init = function() {
-            var itemTemplate, currentVal;
+            var itemTemplate;
 
             xDebug.call(this, arguments.callee.name, arguments);
 
@@ -301,7 +301,9 @@
 
             //defaultDate
             if (this.options.dtPconfig.defaultDate){
-               currentVal = moment.unix(
+                this.options
+                    .dtPconfig
+                    .defaultDate = moment.unix(
                                      this.options.dtPconfig.defaultDate
                                   );
             }

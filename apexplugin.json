@@ -3,7 +3,7 @@
   "version" : "1.0",
   "description" : "DateTimePicker item plugin",
   "keywords" : ["dropdown", "apex", "oracle", "plugin"],
-  "homepage" : "https://github.com/isabolic/apex-plg-dropdown-btn",
+  "homepage" : "https://github.com/isabolic/apex-plg-datetimepicker",
   "bugs" : {
     "url" : "https://github.com/isabolic/apex-plg-datetimepicker/issues",
     "email" : "sabolic.ivan@gmail.com"
