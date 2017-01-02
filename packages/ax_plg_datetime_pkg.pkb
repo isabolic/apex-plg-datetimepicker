@@ -117,6 +117,15 @@ as
      begin
         if f_is_playground = false then
             -- libs
+
+            --
+            --moment.js
+            apex_javascript.add_library(p_name => 'moment', p_directory =>
+            p_plugin.file_prefix, p_version => null, p_skip_extension => false) ;
+
+            apex_javascript.add_library(p_name => 'moment-with-locales', p_directory =>
+            p_plugin.file_prefix, p_version => null, p_skip_extension => false) ;
+
             --
             -- bootstrap-datetimepicker
             apex_javascript.add_library(p_name => 'bootstrap-datetimepicker.min', p_directory =>
@@ -125,16 +134,13 @@ as
             apex_css.add_file(p_name => 'bootstrap-datetimepicker.min', p_directory =>
             p_plugin.file_prefix) ;
 
-            apex_javascript.add_library(p_name => 'moment', p_directory =>
-            p_plugin.file_prefix, p_version => null, p_skip_extension => false) ;
-            -- end of libs
 
             apex_javascript.add_library(p_name => 'datetime.picker', p_directory =>
             p_plugin.file_prefix, p_version => null, p_skip_extension => false) ;
 
             apex_css.add_file(p_name => 'datetime.picker', p_directory =>
             p_plugin.file_prefix) ;
-
+            -- end of libs
         end if;
 
         -- During plug-in development it's very helpful to have some debug information
