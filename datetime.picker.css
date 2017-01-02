@@ -45,6 +45,7 @@
     display: table;
     border-collapse: separate;
     padding: 0px .5rem;
+    width: 200px;
 }
 
 .date-time-picker-wg{
@@ -101,7 +102,7 @@
     position: absolute;
     top: 100%;
     left: 0;
-    z-index: 100;
+    z-index: 991;
     display: none;
     float: left;
     min-width: 160px;
@@ -118,4 +119,21 @@
     border-radius: 4px;
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.t-Form-fieldContainer--stretchInputs .container,
+.t-Form-fieldContainer--stretchInputs .date-time-picker .input-group.date {
+    width: 100%;
+}
+
+.t-Form-fieldContainer--stretchInputs .date-time-picker .input-group.date{
+    display: table !Important;
+}
+
+@media only screen and (max-width: 640px){
+    .date-time-picker,
+    .date-time-picker .form-group,
+    .date-time-picker .input-group.date{
+        width: 100%;
+    }
 }

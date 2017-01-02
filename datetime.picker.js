@@ -30,7 +30,8 @@
                                "</div>"                                                        +
                            "</div>"                                                            +
                        "</div>"                                                                +
-                    "</div>"
+                    "</div>",
+            overlay : "<div class='ui-widget-overlay ui-front'></div>"
         }
     };
 
@@ -164,7 +165,10 @@
      */
     var hideHandler = function(ev){
         xDebug.call(this, arguments.callee.name, arguments);
-
+        // overlay
+        if($.fn.isMobile()){
+          this.$overlayDiv.remove();
+        }
         triggerEvent.call(this, this.events[0], {event : ev, _this : this});
     };
 
@@ -174,7 +178,10 @@
      */
     var showHandler = function(ev){
         xDebug.call(this, arguments.callee.name, arguments);
-
+        //overlay
+        if($.fn.isMobile()){
+          $("body").append(this.$overlayDiv);
+        }
         triggerEvent.call(this, this.events[1], {event : ev, _this : this});
     };
 
@@ -224,6 +231,7 @@
         this.jsName = "apex.plugins.dateTimePicker";
         this.container = null;
         this.widgetCont = $("<div>", {"class" :"date-time-picker-wg"});
+        this.$overlayDiv = null;
         this.options = {};
         this.events = ["datetimepicker-hide",
                        "datetimepicker-show",
@@ -349,6 +357,8 @@
             this.options.$formItem.on("dp.hide"  , hideHandler.bind(this)  );
             this.options.$formItem.on("dp.change", changeHandler.bind(this));
 
+            this.$overlayDiv = $(this.options.htmlTemplate.overlay);
+
             return this;
         }
 
@@ -370,4 +380,9 @@ $.fn.datetimepicker.defaults.icons =  {
             clear: 'fa fa-trash',
             close: 'fa fa-times'
         }
+
+$.fn.isMobile = function() {
+  try{ document.createEvent("TouchEvent"); return true; }
+  catch(e){ return false; }
+}
 })(apex.jQuery, apex);
