@@ -143,10 +143,8 @@
 
     /**
      * [calculatePosition Private set position of container for dropdown after the element is visible]
-     * @param  {[type]} interval [description]
-     * @return {[type]}          [description]
      */
-    var calculatePosition = function(interval){
+    var calculatePosition = function(){
       var ele  = this.options.$formItem,
           left = ele.offset().left - ele.width(),
           top  = ele.offset().top;
@@ -169,6 +167,12 @@
         if($.fn.isMobile()){
           this.$overlayDiv.remove();
         }
+
+        if (this.options.dtPconfig.inline !== true){
+          calculatePosition.call(this);
+          this.widgetCont.hide();
+        }
+
         triggerEvent.call(this, this.events[0], {event : ev, _this : this});
     };
 
@@ -182,6 +186,16 @@
         if($.fn.isMobile()){
           $("body").append(this.$overlayDiv);
         }
+
+
+        this.isRendered = false;
+
+
+        if (this.options.dtPconfig.inline !== true){
+          calculatePosition.call(this);
+          this.widgetCont.show();
+        }
+
         triggerEvent.call(this, this.events[1], {event : ev, _this : this});
     };
 
@@ -239,7 +253,7 @@
         this.format = {oracle:null, moment:null}
         this.isRendered = false;
         this.init = function() {
-            var itemTemplate;
+            var itemTemplate, lDate;
 
             xDebug.call(this, arguments.callee.name, arguments);
 
@@ -301,20 +315,24 @@
 
             //defaultDate
             if (this.options.dtPconfig.defaultDate){
+               lDate =  moment.unix(this.options.dtPconfig.defaultDate).toDate();
+
                 this.options
                     .dtPconfig
-                    .defaultDate = moment.unix(
-                                     this.options.dtPconfig.defaultDate
-                                  );
+                    .defaultDate = new Date(lDate.valueOf() +
+                                            lDate.getTimezoneOffset()
+                                            * 60000);
             }
 
             // current value
             if (this.options.dtPconfig.value){
+                lDate =  moment.unix(this.options.dtPconfig.value).toDate();
+
                 this.options
                     .dtPconfig
-                    .defaultDate = moment.unix(
-                                     this.options.dtPconfig.value
-                                  );
+                    .defaultDate = new Date(lDate.valueOf() +
+                                            lDate.getTimezoneOffset()
+                                            * 60000);
                 delete this.options.dtPconfig.value;
             }
 
@@ -339,7 +357,7 @@
             this.options.$formItem.datetimepicker(this.options.dtPconfig);
 
             if (this.options.dtPconfig.inline !== true){
-
+                this.widgetCont.hide();
                 intervalFlag.call(
                   this, calculatePosition, "isRendered"
                 );

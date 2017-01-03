@@ -47,10 +47,10 @@ as
     function get_epoch(p_date date) return number is
      v_epoch_n number;
      begin
-     select extract(day from (from_tz(cast(p_date as timestamp), sessiontimezone) at time zone 'UTC' -timestamp '1970-01-01 00:00:00 +00:00'))*86400+
-            extract(hour from (from_tz(cast(p_date as timestamp), sessiontimezone) at time zone 'UTC' -timestamp '1970-01-01 00:00:00 +00:00'))*3600+
-            extract(minute from (from_tz(cast(p_date as timestamp), sessiontimezone) at time zone 'UTC' -timestamp '1970-01-01 00:00:00 +00:00'))*60+
-            extract(second from (from_tz(cast(p_date as timestamp), sessiontimezone) at time zone 'UTC' -timestamp '1970-01-01 00:00:00 +00:00')) date_to_epoch
+     select extract(day from (from_tz(cast(p_date as timestamp), '+00:00') at time zone 'UTC' -timestamp '1970-01-01 00:00:00 +00:00'))*86400+
+            extract(hour from (from_tz(cast(p_date as timestamp), '+00:00') at time zone 'UTC' -timestamp '1970-01-01 00:00:00 +00:00'))*3600+
+            extract(minute from (from_tz(cast(p_date as timestamp), '+00:00') at time zone 'UTC' -timestamp '1970-01-01 00:00:00 +00:00'))*60+
+            extract(second from (from_tz(cast(p_date as timestamp), '+00:00') at time zone 'UTC' -timestamp '1970-01-01 00:00:00 +00:00')) date_to_epoch
        into v_epoch_n
        from dual;
 
