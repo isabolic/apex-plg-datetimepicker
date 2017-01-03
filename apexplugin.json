@@ -25,7 +25,7 @@
       "plugin" : {
         "internalName" : "DATE.TIME.PICKER",
         "type" : "item",
-        "demo" : "https://apex.oracle.com/pls/apex/f?p=101959:3",
+        "demo" : "https://apex.oracle.com/pls/apex/f?p=101959:8",
         "previewImage" : "https://raw.githubusercontent.com/isabolic/apex-plg-datetimepicker/master/datetimepicker.png"
       }
     }
