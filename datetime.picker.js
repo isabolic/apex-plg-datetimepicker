@@ -187,9 +187,7 @@
           $("body").append(this.$overlayDiv);
         }
 
-
         this.isRendered = false;
-
 
         if (this.options.dtPconfig.inline !== true){
           calculatePosition.call(this);
@@ -354,6 +352,17 @@
                                   ).toDate();
             }
 
+            if($.fn.isMobile()){
+               this.options
+                    .dtPconfig = $.extend(this.options
+                                              .dtPconfig,
+                                              { focusOnShow : false
+                                                 ,showClose : true
+                                                 ,showClear : true }
+                                              );
+            }
+
+
             this.options.$formItem.datetimepicker(this.options.dtPconfig);
 
             if (this.options.dtPconfig.inline !== true){
@@ -396,9 +405,9 @@ $.fn.datetimepicker.defaults.icons =  {
             down: 'fa fa-chevron-down',
             previous: 'fa fa-chevron-left',
             next: 'fa fa-chevron-right',
-            today: 'a-Icon icon-calendar',
+            today: 'fa fa-calendar-check-o',
             clear: 'fa fa-trash',
-            close: 'fa fa-times'
+            close: 'fa fa-check'
         }
 
 $.fn.isMobile = function() {
