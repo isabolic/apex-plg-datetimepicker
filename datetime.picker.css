@@ -1,3 +1,8 @@
+.a-GV-columnItem .date-time-picker,
+.a-GV-columnItem .date-time-picker .input-group.date{
+    width: 100%;
+}
+
 .date-time-picker .input-group-addon {
     padding: .4rem .8rem;
     font-size: 14px;
