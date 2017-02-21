@@ -2,7 +2,7 @@
   "name" : "dateTimePicker",
   "version" : "1.0.1",
   "description" : "DateTimePicker item plugin",
-  "keywords" : ["dropdown", "apex", "oracle", "plugin"],
+  "keywords" : ["DateTimePicker", "apex", "oracle", "plugin"],
   "homepage" : "https://github.com/isabolic/apex-plg-datetimepicker",
   "bugs" : {
     "url" : "https://github.com/isabolic/apex-plg-datetimepicker/issues",
