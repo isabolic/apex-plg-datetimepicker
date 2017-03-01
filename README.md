@@ -8,7 +8,7 @@ install instruction :
 
 2) run install sql scripts for apex item_type_plugin_date_time_picker.sql
 
-- examples and docs => https://apex.oracle.com/pls/apex/f?p=101959:8
+examples and docs => https://apex.oracle.com/pls/apex/f?p=101959:8
 
 
 ![](https://raw.githubusercontent.com/isabolic/apex-plg-datetimepicker/master/datetimepicker.png)
