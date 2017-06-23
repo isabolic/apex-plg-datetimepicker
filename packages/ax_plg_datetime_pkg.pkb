@@ -114,6 +114,7 @@ as
         v_s_by_s       p_item.attribute_12%type := p_item.attribute_12;
         v_show_time    p_item.attribute_13%type := p_item.attribute_13;
         v_show_date    p_item.attribute_14%type := p_item.attribute_14;
+        v_local        p_item.attribute_15%type := p_item.attribute_15;
      begin
         if f_is_playground = false then
             -- libs
@@ -236,6 +237,8 @@ as
         if v_s_by_s = 'Y' then
            apex_json.write('sideBySide',  true);
         end if;
+
+        apex_json.write('locale',  nvl(v_local, 'en'));
 
         v_static_list    := wwv_flow_utilities.string_to_table2(v_format,' ');
 
