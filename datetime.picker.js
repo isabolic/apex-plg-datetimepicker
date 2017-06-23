@@ -16,20 +16,20 @@
         $itemId          : null,
         dtPconfig        : {},
         htmlTemplate     : {
-            item :  "<div class='container date-time-picker' id='cont-#itemId#'>"              +
-                       "<div class='row'>"                                                     +
-                           "<div>"                                            +
-                               "<div class='form-group'>"                                      +
+            item :  "<div class='date-time-picker' id='cont-#itemId#'>"                                      +
+                       "<div class='row'>"                                                                   +
+                           "<div>"                                                                           +
+                               "<div class='form-group'>"                                                    +
                                    "<div class='t-Form-inputContainer input-group date' id='form-#itemId#'>" +
-                                       "<div class='hidden-input'></div>"                      +
-                                       "<input type='text' class='form-control' />"            +
-                                       "<span class='input-group-addon'>"                      +
-                                           "<span class='fa fa-calendar'></span>"              +
-                                       "</span>"                                               +
-                                   "</div>"                                                    +
-                               "</div>"                                                        +
-                           "</div>"                                                            +
-                       "</div>"                                                                +
+                                       "<div class='hidden-input'></div>"                                    +
+                                       "<input type='text' class='form-control' />"                          +
+                                       "<span class='input-group-addon'>"                                    +
+                                           "<span class='fa fa-calendar'></span>"                            +
+                                       "</span>"                                                             +
+                                   "</div>"                                                                  +
+                               "</div>"                                                                      +
+                           "</div>"                                                                          +
+                       "</div>"                                                                              +
                     "</div>",
             overlay : "<div class='ui-widget-overlay ui-front'></div>"
         }

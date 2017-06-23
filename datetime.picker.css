@@ -142,3 +142,7 @@
         width: 100%;
     }
 }
+
+.date-time-picker .input-group-addon .fa {
+    font-size: 14px;
+}
