@@ -126,7 +126,7 @@
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
 }
 
-.t-Form-fieldContainer--stretchInputs .container,
+.t-Form-fieldContainer--stretchInputs .date-time-picker,
 .t-Form-fieldContainer--stretchInputs .date-time-picker .input-group.date {
     width: 100%;
 }
