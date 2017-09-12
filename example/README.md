@@ -1,5 +1,5 @@
 
-## Oracle apex plugins example for Datetimepicker
+## Oracle apex application example for Datetimepicker plugin 
 In your apex workspace:
 1) [X] select import application and select to **f118.sql** file
 2) [X] for **"File type"** select **"Database Application, Page or Component Export"**
